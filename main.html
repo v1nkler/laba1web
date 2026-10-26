@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <title>Лабараторная работа номер 1(Винклер Илья) </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <table class ="oformlenie-my-table" id ="main-taible">
+            <thead>
+                <tr>
+                    <td>ФИО: Винклер Илья Сергеевич</td>
+                </tr>
+                
+                <tr><td>Номер группы: P3211</td></tr>
+                <tr><td>Номер варианта: 12669</td></tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <div>
+                    <canvas id="myCanvas" width ="400" height="400"></canvas>
+                    </div>
+                </td>
+                <td>
+                    <form>
+
+                        <div id ="div-x">
+                            <button type="button" class="x-send" value="-5">-5</button>                              <!--X-->
+                            <button type="button" class="x-send" value="-4">-4</button>
+                            <button type="button" class="x-send" value="-3">-3</button>
+                            <button type="button" class="x-send" value="-2">-2</button>
+                            <button type="button" class="x-send" value="-1">-1</button>
+                            <button type="button" class="x-send" value="0">0</button>
+                            <button type="button" class="x-send" value="1">1</button>
+                            <button type="button" class="x-send" value="2">2</button>
+                            <button type="button" class="x-send" value="3">3</button>
+                        </div>
+
+                        <div> 
+                            <label for ="YText">Изменения для Y</label>                                         <!--Y--> 
+                            <input type = "text" id ="YText" placeholder="-3..3">
+                        </div>
+                        <button type="submit">отправить данные</button>
+                        <button type="button" id ="cliner-xyr">очистить</button>
+                    </form>
+                        <div id = div-r>
+                            <label for ="RRadio1">1</label>                                                         <!--R-->
+                            <input type="radio" id = "RRadio1" name ="r-value"  value="1">
+                            <label for ="RRadio2">2</label>
+                            <input type="radio" id = "RRadio2" name ="r-value" value="2">
+                            <label for ="RRadio3">3</label>
+                            <input type="radio" id = "RRadio3" name ="r-value" value="3">
+                            <label for ="RRadio4">4</label>
+                            <input type="radio" id = "RRadio4" name ="r-value" value="4">
+                            <label for ="RRadio5">5</label>
+                            <input type="radio" id = "RRadio5" name ="r-value" value="5">
+                        </div>
+                </td>
+            
+            </tr>    
+            <tr>
+                <td>
+                    <table id="result-table">
+                        <thead>
+                            <th>X</th>
+                            <th>Y</th>
+                            <th>R</th>
+                            <th>Результат</th>
+                            <th>Время</th>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+
+
+
+
+
+
+ 
+            
+
+
+
+
+
+
+            </tbody>
+        </table>
+        <script src="script.js"></script>
+    </body>
+
+</html>
