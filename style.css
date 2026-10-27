@@ -5,15 +5,12 @@ thead{
 }
 
 
-
-
-
-
-
-
-
 .oformlenie-my-table{
     width: 80%;
     margin: 0 auto;
     
+}
+
+button-x-reaction{
+    border-color:aqua;
 }

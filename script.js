@@ -148,10 +148,12 @@ render();
 
 
 //X
-let selectedX = 0;
+const validbutton = ['-5','-4','-3','-2','-1','0','1','2','3']
+let selectedX = null;
 const x = document.querySelector('#div-x');
 x.addEventListener('click', (e) => {
-    if (e.target.tagName === 'BUTTON'){
+    if (e.target.tagName === 'BUTTON' && validbutton.includes(e.target.value)){
+        
         selectedX  = e.target.value;
 }});
 
