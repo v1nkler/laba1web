@@ -17,18 +17,37 @@ const toPy = (my) => canvas.height / 2 - my * SCALE;
 
 
 function render(){
-    ctx.fillStyle = 'black';
-    ctx.font = '6px sans-serif';
+ctx.fillStyle = 'black';
+ctx.font = '10px sans-serif';
     
-    ctx.textAlign = 'left';
-    ctx.textBaseline = 'middle'; 
+ctx.textAlign = 'left';
+ctx.textBaseline = 'middle'; 
 
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+ctx.clearRect(0, 0, canvas.width, canvas.height);
     
-    //фиугры
-    ctx.beginPath();
-    ctx.fillStyle = "blue";
-    ctx.fillRect(centerx,centery,curentR/2,curentR);
+//фиугры
+const radius = curentR * SCALE;
+ctx.fillStyle = "rgba(28, 134, 192, 0.65)";
+
+// прямоугольник
+ctx.fillRect(centerx - radius / 2,centery,radius / 2,radius);
+
+// треуголь
+ctx.beginPath();
+ctx.moveTo(centerx - radius, centery);
+ctx.lineTo(centerx, centery - radius);
+ctx.lineTo(centerx, centery);
+ctx.closePath();
+ctx.fill();
+
+// круг
+ctx.beginPath();
+ctx.moveTo(centerx, centery);
+ctx.arc(centerx,centery,radius / 2,-Math.PI / 2,0);
+ctx.closePath();
+ctx.fill();
+
+ctx.fillStyle = 'black';
 
 
 
@@ -138,7 +157,7 @@ x.addEventListener('click', (e) => {
 
 
 //Y
-const y = document.querySelector('#Ytext');
+const y = document.querySelector('#YText');
 y.addEventListener('beforeinput', (e) =>{
     if(!e.data) return;
     const value = y.value;
@@ -159,9 +178,10 @@ y.addEventListener('beforeinput', (e) =>{
 )
 
 //R
-let selectedR = 0;
+let selectedR = 1;
 const r  = document.querySelector("#div-r")
 r.addEventListener('change',(e)=>{
     selectedR = e.target.value;
     curentR = selectedR;
+    render();
 })
